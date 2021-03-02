@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  web:
+    container_name: NAMAPROJEK
+    restart: always
+    build:
+      context: ./docker/web
+    extra_hosts:
+       - "hostnamemysql:ipmysql"
+    networks:
+      namaprojek_net:
+        ipv4_address: IPADDRESS
+    volumes:
+      - ./src:/var/www/app
+networks:
+  namaprojek_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: SBT
+          gateway: IGW
