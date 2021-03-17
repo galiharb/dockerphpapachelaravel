@@ -16,3 +16,9 @@ docker-compose up -d --build
 ```
 docker-compose exec -T web composer update
 ```
+
+### Jika Aplikasi PHP Native
+```
+  - Ubah path DocumentRoot /var/www/app/public menjadi /var/www/app pada file default.conf
+  - Jalankan kembali docker-compose up -d --build
+```
