@@ -1,5 +1,18 @@
 # dockerphpapachelaravel
 
-ganti ip, nama container dan nama network pada file docker compose
+### Konfigurasi Awal
+```
+ - Ganti IP Address
+ - Ganti Nama Container
+ - Ganti Nama Network
+```
 
+Selanjutnya jalankan perintah berikut
+```
 docker-compose up -d --build
+```
+
+### Cara Menjalankan Composer
+```
+docker-compose exec -T web composer update
+```
